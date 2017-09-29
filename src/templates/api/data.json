@@ -1,0 +1,37 @@
+[
+    {
+        "id": 1,
+        "product_name": "Watch 1",
+        "price": 2000,
+        "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci, nobis!",
+        "image": "https://www.iguides.ru/upload/medialibrary/bab/bab05e6f099dab9030142e044caf584a.jpg"
+    },
+    {
+        "id": 2,
+        "product_name": "Watch 2",
+        "price": 1450,
+        "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci, nobis!",
+        "image": "https://store.storeimages.cdn-apple.com/4662/as-images.apple.com/is/image/AppleInc/aos/published/images/w/at/watch/accessories/watch-accessories-201709_GEO_GB?wid=491&hei=281&fmt=png-alpha&qlt=95&.v=1504923479766"
+    },
+    {
+        "id": 3,
+        "product_name": "Watch 3",
+        "price": 120,
+        "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci, nobis!",
+        "image": "https://store.storeimages.cdn-apple.com/4662/as-images.apple.com/is/image/AppleInc/aos/published/images/4/2/42/alu/42-alu-silver-sport-fog-nc-s3-grid?wid=270&hei=275&fmt=jpeg&qlt=95&op_sharpen=0&resMode=bicub&op_usm=0.5,0.5,0,0&iccEmbed=0&layer=comp&.v=1504648160087"
+    },
+    {
+        "id": 4,
+        "product_name": "Watch 4",
+        "price": 1000,
+        "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci, nobis!",
+        "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSTszH78Rp9-xCmTzmjp-rW70-9SJRw5eeC9vNbStBlT9hM6WGgVw"
+    },
+    {
+        "id": 5,
+        "product_name": "Watch 5",
+        "price": 99.99,
+        "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci, nobis!",
+        "image": "http://hitech.vesti.ru/pics/g/112/75.jpg"
+    }
+]

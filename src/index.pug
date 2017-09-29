@@ -6,57 +6,7 @@ html(lang='en')
         meta(http-equiv="X-UA-Compatible")
         title= 1
     body
-        header.header
-            .header_top
-                .container
-                    .row
-                        .col-xs-4
-                        .col-xs-8
-                            nav
-                                ul.main-menu
-                                    each val in ['Buy', 'Sell', 'Rent', 'Landlords', 'About us']
-                                        li
-                                            a= val
-            .header_bottom
-                div.v-slider-wrapper
-                    div.v-slider-wrapper_search
-                        div.v-slider-wrapper_search-head we sell
-                            span  dreams
-                        div.v-slider-wrapper_search-body#v-slider-wrapper_search-body
-                            //input(id= 'tab1' type= 'radio' name= 'rad-search' checked= true)
-                            //label(for= 'tab1').v-slider-wrapper_search-button1 Find home
-                            //input(id= 'tab2' type= 'radio' name= 'rad-search')
-                            //label(for= 'tab2').v-slider-wrapper_search-button2 Sell my home
-                            //div#search-1
-                            //    input(id= 'search-1-input' type='text' placeholder= 'Find home')
-                            //    button
-                            //        img(src= 'assets/img/search-home/search-icon.svg')
-                            //    div#rr-find-home
-                            //div#search-2
-                            //    input(id= 'search-2-input' type='text' placeholder= 'Sell my home')
-                            //    button
-                            //        img(src= 'assets/img/search-home/search-icon.svg')
-                            //    div#rr-sell-my-home
-
-                    ul.single-item
-                        each val in ['http://cdn.fishki.net/upload/post/201411/26/1334081/57542_trava_priroda_doroga_leto_1920x1200_wwwgdefonru.jpg', 'http://fotointeres.ru/wp-content/uploads/2011/09/unrealistic_scenes_nathan_spotts_09.jpg', 'http://elitefon.ru/images/201211/elitefon.ru_18998.jpg', 'http://7oom.ru/wp-content/uploads/foto-priroda-23.jpg']
-                            li
-                                img(src= val)
-
-        section.s-main
-            .container
-                .row
-                    .col-md-12
-                        a(href='search-main.html') Поиск
-                    .col-md-12
-                        a(href='search-map.html') Мапа
-                    .col-md-12
-                        a(href='favorite-listings.html') Мой список
-                .row
-                    - var max=100
-                        .col-md-12
-                            - for(var i=0; i<max; i++)
-                                hr
-
-
+        header
+        section
+            #v-root
         footer
