@@ -1,0 +1,39 @@
+doctype
+html(lang='en')
+    head
+        meta(name='viewport')
+        meta(content='width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0')
+        meta(http-equiv="X-UA-Compatible")
+        title= 1
+    body
+        header.header
+            .header_top
+                .container
+                    .row
+                        .col-md-12
+                            div#scheduleShowing-1
+                        .col-xs-4
+                        .col-xs-8
+                            nav
+                                ul.main-menu
+                                    each val in ['Buy', 'Sell', 'Rent', 'Landlords', 'About us']
+                                        li
+                                            a= val
+
+        div#v-map
+        div
+            a(href='index.html') Назад
+        .container
+            .row
+                .col-xs-8.col-xs-offset-2
+                    div#v-calculator
+            .row
+                .col-md-12
+                    div#scheduleShowing-2
+
+        div#overlay sdsdsd
+
+
+
+        footer
+

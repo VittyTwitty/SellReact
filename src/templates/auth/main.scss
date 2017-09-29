@@ -1,0 +1,36 @@
+.login-form {
+  display: flex;
+  flex-direction: column;
+  padding: 30px;
+}
+.logout-form {
+  display: flex;
+  flex-direction: column;
+  padding: 30px;
+}
+.login-form,
+.logout-form {
+  input {
+    height: 30px;
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+  button {
+    display: flex;
+    align-self: center;
+    justify-content: center;
+    height:30px;
+    margin-top: 10px;
+    min-width: 40%;
+    padding: 5px 10px;
+    border: none;
+    outline: none;
+    background-color: #fff;
+    transition: .3s;
+    &:hover {
+      background-color: #36AAFE;
+      color: #fff;
+    }
+    
+  }
+}

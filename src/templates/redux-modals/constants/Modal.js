@@ -1,0 +1,2 @@
+export const ADD_MODAL_TO_VIEW = 'ADD_MODAL_TO_VIEW';
+export const DELETE_MODAL_TO_VIEW = 'DELETE_MODAL_TO_VIEW';
