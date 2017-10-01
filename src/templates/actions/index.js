@@ -1,21 +1,24 @@
-import * as api from '../api/people-request';
+import * as api from '../api/users-request';
 
-export const getPeoples = (idPeople) => (dispatch) => {
-    dispatch({
-        type: 'GET_PEOPLES_REQUEST'
+// const receiveUsers = users => ({
+//   type: 'GET_ALL_USERS',
+//   users: users
+// });
+export const getAllUsers = () => (dispatch) => {
+  dispatch({
+    type: 'GET_ALL_USERS_REQUEST'
+  });
+  api.getUsers()
+    .then((users) => {
+      return dispatch({
+        type: 'GET_ALL_USERS',
+        payload: users
+      })
+    })
+    .catch((err) => {
+      dispatch({
+        type: 'GET_ALL_USERS_FAIL',
+        payload: err.data.message
+      })
     });
-    api.getPeoples()
-        .then((peoples) => {
-            return dispatch({
-                type: 'GET_PEOPLES_SUCCESS',
-                payload: peoples
-            })
-        })
-        .catch((err) => {
-            dispatch({
-                type: 'GET_PEOPLES_FAILURE',
-                payload: err.data.message
-            })
-        })
-
-}
+};

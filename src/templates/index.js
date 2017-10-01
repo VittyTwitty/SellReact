@@ -8,8 +8,8 @@ import './template.scss';
 const store = configureStore(window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__());
 
 render(
-    <Provider store={store}>
-        <App/>
-    </Provider>,
-    document.getElementById('v-root')
+  <Provider store={store}>
+    <App/>
+  </Provider>,
+  document.getElementById('v-root')
 );
