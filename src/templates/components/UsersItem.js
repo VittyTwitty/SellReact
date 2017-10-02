@@ -1,11 +1,14 @@
 import React, {Component} from 'react';
 
 import {Link} from "react-router-dom";
+import {connect} from "react-redux";
+import {bindActionCreators} from "redux";
+import * as usersAction from '../actions/index';
 
 class UsersItem extends Component {
     onAddFriend(e) {
         e.preventDefault();
-        console.log('sdsdsdsd')
+        this.props.usersAction.addToFriends(this.props.id)
     }
     render() {
         const {user, index, id} = this.props;
@@ -36,4 +39,11 @@ class UsersItem extends Component {
     }
 }
 
-export default UsersItem;
+const mapStateToProps = state => ({
+    users: state.users,
+    id: state.index
+});
+const mapDispatchToProps = dispatch => ({
+    usersAction: bindActionCreators(usersAction, dispatch)
+});
+export default connect(mapStateToProps, mapDispatchToProps)(UsersItem);

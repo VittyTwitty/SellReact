@@ -1,5 +1,4 @@
 import React, {Component} from 'react';
-import UsersItem from "../components/UsersItem";
 import {connect} from "react-redux";
 import {bindActionCreators} from "redux";
 import * as usersAction from '../actions/index';
@@ -7,8 +6,9 @@ import * as usersAction from '../actions/index';
 
 class FriendList extends Component {
     componentDidMount() {
-        const id = this.props.match.params.number;
-        this.props.usersAction.addToFriends(id);
+        // const id = this.props.match.params.number;
+        //
+        console.log('this.props FRIENDS', this.props);
     }
     render() {
         const {friends} = this.props;
