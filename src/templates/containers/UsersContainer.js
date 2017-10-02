@@ -2,36 +2,36 @@ import React, {Component} from 'react';
 import {connect} from "react-redux";
 import * as usersAction from '../actions/index';
 import {bindActionCreators} from "redux";
-import UsersItem from "../components/UsersItem";
+import UsersList from "../components/UsersList";
+import FriendList from "./FriendList";
 
 class UsersContainer extends Component {
-	componentDidMount() {
-		this.props.usersAction.getAllUsers();
-	}
+    componentDidMount() {
+        this.props.usersAction.getAllUsers();
+    }
 
-	render() {
-		const {users} = this.props.users;
-		console.log('users', users);
-		return (
-			<div>
-				{
-					users ? users.map((item, index) =>
-						<UsersItem
-							key={index}
-							users={this.props.users}
-						/>) : <div>Empty</div>
-				}
-			</div>
-		)
-	}
+    render() {
+
+        console.log(this.props.users);
+        return (
+            <div>
+                <UsersList
+                    users={this.props.users.users}
+                />
+                <FriendList />
+            </div>
+
+
+        )
+    }
 }
 
 const mapStateToProps = state => ({
-	users: state.users
+    users: state.users
 });
 
 const mapDispatchToProps = dispatch => ({
-	usersAction: bindActionCreators(usersAction, dispatch)
+    usersAction: bindActionCreators(usersAction, dispatch)
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(UsersContainer);

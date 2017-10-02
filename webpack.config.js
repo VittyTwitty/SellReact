@@ -62,6 +62,10 @@ module.exports = {
             }
         ]
     },
+    devServer: {
+        contentBase: path.join(__dirname, "dist"),
+        historyApiFallback: true
+    },
     plugins: [
         new ExtractTextPlugin("[name].css"),
         new CopyWebpackPlugin([
