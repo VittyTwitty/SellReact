@@ -11,6 +11,7 @@ ul {
 }
 
 .users-list {
+  margin-bottom: 320px;
   .users-item {
     width: 100%;
     padding-bottom: 10px;
@@ -59,8 +60,22 @@ ul {
   max-width: 500px;
   height: 300px;
   position: fixed;
+  padding: 10px;
+  overflow: auto;
   bottom: 0;
   background-color: #ff8582;
   left: 0;
   z-index: 100;
+  li{
+    display: flex;
+    justify-content: space-between;
+    height: 70px;
+    margin-bottom: 10px;
+  }
+}
+
+#filter-names{
+  width: 130px;
+  height: 30px;
+  background-color: #fff;
 }

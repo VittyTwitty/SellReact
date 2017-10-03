@@ -1,22 +1,25 @@
 import React, {Component} from 'react';
 import {connect} from "react-redux";
+import FriendsItem from "../components/FriendsItem";
+import FriendsFilters from "../components/FriendsFilters";
+import * as actionFilters from '../actions/index';
 import {bindActionCreators} from "redux";
-import * as usersAction from '../actions/index';
 
 
 class FriendList extends Component {
-    componentDidMount() {
-        // const id = this.props.match.params.number;
-        //
-        console.log('this.props FRIENDS', this.props);
-    }
+
     render() {
-        const {friends} = this.props;
+        const {friends} = this.props.users;
+        const {filterFriendsByName, searchFriendsBySurname} = this.props.actionFilters;
         return (
             <ul className='friends-list'>
+                <FriendsFilters
+                    filterFriendsByName={filterFriendsByName}
+                    searchFriendsBySurname={searchFriendsBySurname}
+                />
                 {
-                    friends ? friends.map((item, index) =>
-                       <li>ddddddd</li>
+                    friends.length ? friends.map((item, index) =>
+                        <FriendsItem key={index} item={item} index={index}/>
                     ) : 'No Friends'
                 }
             </ul>
@@ -24,12 +27,12 @@ class FriendList extends Component {
         )
     }
 }
+
 const mapStateToProps = state => ({
-    users: state.users,
-    id: state.index
+    users: state.users
+});
+const mapDispatchToProps = dispatch => ({
+    actionFilters: bindActionCreators(actionFilters, dispatch)
 });
 
-const mapDispatchToProps = dispatch => ({
-    usersAction: bindActionCreators(usersAction, dispatch)
-});
 export default connect(mapStateToProps, mapDispatchToProps)(FriendList);

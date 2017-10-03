@@ -11,7 +11,7 @@ class UsersItem extends Component {
         this.props.usersAction.addToFriends(this.props.id)
     }
     render() {
-        const {user, index, id} = this.props;
+        const {user, id} = this.props;
         return (
             <li className='users-item'>
                 <Link to={`/detail/${id}`} replace>
@@ -40,8 +40,7 @@ class UsersItem extends Component {
 }
 
 const mapStateToProps = state => ({
-    users: state.users,
-    id: state.index
+    users: state.users
 });
 const mapDispatchToProps = dispatch => ({
     usersAction: bindActionCreators(usersAction, dispatch)
