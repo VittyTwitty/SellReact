@@ -10,6 +10,7 @@ class FriendList extends Component {
 
     render() {
         const {friends} = this.props.users;
+        const {searchedFriends} = this.props.search;
         const {filterFriendsByName, searchFriendsBySurname} = this.props.actionFilters;
         return (
             <ul className='friends-list'>
@@ -18,10 +19,32 @@ class FriendList extends Component {
                     searchFriendsBySurname={searchFriendsBySurname}
                 />
                 {
-                    friends.length ? friends.map((item, index) =>
-                        <FriendsItem key={index} item={item} index={index}/>
-                    ) : 'No Friends'
+                    !searchedFriends ?
+                        <div>
+                            {
+                                friends.length ? friends.map((item, index) =>
+                                    <FriendsItem
+                                        key={index}
+                                        item={item}
+                                        index={index}
+                                    />
+                                ) : 'No Friends'
+                            }
+                        </div> :
+                        <div>
+                            {
+                                searchedFriends.map((item, index) =>
+                                    <FriendsItem
+                                        key={index}
+                                        item={item}
+                                        index={index}
+                                    />
+                                )
+                            }
+                        </div>
+
                 }
+
             </ul>
 
         )
@@ -29,7 +52,8 @@ class FriendList extends Component {
 }
 
 const mapStateToProps = state => ({
-    users: state.users
+    users: state.users,
+    search: state.search
 });
 const mapDispatchToProps = dispatch => ({
     actionFilters: bindActionCreators(actionFilters, dispatch)

@@ -85,10 +85,6 @@ export const searchFriendsBySurname = (innerSurname) => (dispatch, getState) => 
     let displayingFriends = friends.filter((item) => {
         let surname = item.name.last.toLowerCase();
         return surname.indexOf(searchQuery) !== -1;
-        // if(surname === innerSurname) {
-        //     console.log(item);
-        //     // return item;
-        // }
 
     });
 

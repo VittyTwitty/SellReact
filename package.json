@@ -51,7 +51,7 @@
     "webpack-dev-server": "^2.7.1"
   },
   "scripts": {
-    "dev": "webpack-dev-server"
+    "dev": "webpack-dev-server --progress"
   },
   "keywords": [],
   "author": "",
